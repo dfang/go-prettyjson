@@ -198,3 +198,9 @@ func Marshal(v interface{}) ([]byte, error) {
 func Format(data []byte) ([]byte, error) {
 	return NewFormatter().Format(data)
 }
+
+// Just print for debugging
+func Print(v interface{}) {
+    s, _ := Marshal(v)
+    fmt.Println(string(s))
+}
