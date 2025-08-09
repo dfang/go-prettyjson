@@ -204,3 +204,9 @@ func Print(v interface{}) {
     s, _ := Marshal(v)
     fmt.Println(string(s))
 }
+
+// Printf prints formatted pretty JSON for debugging
+func Printf(format string, v interface{}) {
+    s, _ := Marshal(v)
+    fmt.Printf(format, string(s))
+}
